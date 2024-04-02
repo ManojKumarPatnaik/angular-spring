@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+</head>
+<body>
+
+<div class="container mt-3">
+ 
+  <table class="table table-dark table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of employees">
+        <td>{{emp.id}}</td>
+        <td>{{emp.email}}</td>
+        <td>{{emp.password}}</td>
+        <td><button (click)="deleteEmployee(emp.id)" class="btn btn-danger">Delete</button>
+            <button (click)="updateEmployee(emp.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+            <button (click)="employeeDetails(emp.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+        </td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+
+<app-footer></app-footer>
+</body>
+</html>
+

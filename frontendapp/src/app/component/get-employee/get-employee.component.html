@@ -1,0 +1,23 @@
+<h2>Employee Details</h2> 
+
+<hr/>
+<div *ngIf="employee">
+  <div>
+    <label><b>Id: </b></label> {{employee.id}}
+  </div>
+  <div>
+    <label><b>Email: </b></label> {{employee.email}}
+  </div>
+  <div>
+    <label><b>Password: </b></label> {{employee.password}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Employee List</button><br>
+
+
+
+
+<app-footer></app-footer>

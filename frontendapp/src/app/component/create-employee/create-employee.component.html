@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+</head>
+<body>
+
+<div class="container mt-3">
+  <h2>Registration form</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="mb-3 mt-3">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" required [(ngModel)]="employee.email" 
+       name="email">
+    </div>
+    <div class="mb-3">
+      <label for="password">Password:</label>
+      <input type="password" class="form-control" id="password"  placeholder="Enter password"  required 
+      [(ngModel)]="employee.password"name="password">
+    </div>
+   
+    <button type="submit"  class="btn btn-primary">Submit</button>
+  </form>
+</div>
+<app-footer></app-footer>
+</body>
+</html>
